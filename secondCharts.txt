@@ -1,0 +1,29 @@
+Mini Project 1
+Lab Exercise - Page 91 Module 4 Instead of doing this lab exercise we will work on our mini project ideas instead.
+Treat this like a mini-project we'll give 8-10 hours~ of class time.
+Utilise what you have learnt so far to create a rich Front-end application.
+Follow these steps below
+- Start with figuring out what you want to show, for example, a hobby of yours, you don't need to make social posts
+page. (Search for an api that you can use for that hobby).
+- Create requirements, do some research, perhaps Pinterest to get some ideas. (Requirements Gathering)
+- Prepare your lo-fi / sketches
+- Prepare your application on Figma
+- Fully complete the requirements gathering process/designing before you code!!
+- Get Coding and remember to use responsive design. (Use HTML, CSS, JS, Bootstrap)
+- At least one fetch API call and good use of it (showing the data)
+- Add things such as animations, time(moment.js), charts. (focus on this last, but ideally at least one Animation)
+Discuss the application with your lead trainer and assistant trainer, in order to get feedback.
+- Upload everything to GitHub, potentially, make a GitHub page. You may want to
+start showcasing your knowledge. Your github readME should be well documented.
+- Finally, you will be presenting your projects to the class (5mins~)
+Talking points
+1. What was your requirements gathering and design process? Was it useful/successful?
+2. Give a high level overview of your application and its features
+3. Where does its data come from (external APIs)?
+4. What JS techniques have you used (eg. objects, arrays, DOM functions, loops, functions)?
+5. How can the user interact with this data?
+5. What external tools/libraries have you used (eg. bootstrap/axios/charts)? How? Why?
+6. What kinds of HTML elements have you used (eg. tables, forms, divs, lists, headings, menus, videos, images)?
+7. What kinds of CSS features have you used (eg. animations, backgrounds, fonts, colours, flexbox, grid)?
+8. How might you extend the features of your application in future?
+I have shared a google sheets to you all with a list of free api's that could be interesting/easier for you to use.

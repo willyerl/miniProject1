@@ -1,0 +1,202 @@
+body {
+    background-color: rgb(255, 254, 254);
+    font-size: 20px;
+    height: inherit;
+    font-family: 'Inconsolata', monospace;
+    transition: 2s;
+
+}
+
+#photoStart {
+    background-color: black;
+}
+
+
+#sec1 {
+
+    display: flex;
+    flex-wrap: wrap;
+    column-count: 3;
+    column-gap: 10px;
+    height: 0px;
+    overflow: hidden;
+    align-items: center;
+    font-size: large;
+    margin-left: -24px;
+    background-color: rgb(241, 231, 223);
+    box-shadow: 20px -20px 44px -6px rgb(192, 233, 219);
+
+
+
+}
+
+
+div.triangle1 {
+
+    position: relative;
+    width: 17vw;
+    height: 17vw;
+    background-color: rgb(17, 17, 17);
+    transform: rotate(45deg);
+
+    left: -14vw;
+    transition: 2s;
+}
+
+.tri1 {
+
+    position: relative;
+    width: 13vw;
+    height: 13vw;
+    background-color: rgba(123, 246, 205, 0.535);
+    top: 2.5vw;
+    left: 1.5vw;
+    box-shadow: 20px -20px 44px -6px rgb(123, 246, 205);
+}
+
+div.triangle1:hover {
+    left: -10vw;
+
+}
+
+
+.information img {
+
+    height: 30vw;
+    object-fit: contain;
+    margin-left: 30%;
+}
+
+#exp {
+
+    overflow: hidden;
+    height: 0px;
+    width: 10em;
+
+}
+
+
+
+#sec2 {
+
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4vw;
+    height: 0px;
+    align-items: center;
+    background-color: rgb(241, 231, 223);
+    box-shadow: 20px -20px 44px -6px rgb(192, 233, 219);
+
+
+
+}
+
+div.triangle2 {
+
+    position: relative;
+    width: 17vw;
+    height: 17vw;
+    background-color: rgb(17, 17, 17);
+    transform: rotate(45deg);
+
+    left: -14vw;
+    transition: 2s;
+}
+
+.tri2 {
+
+    position: relative;
+    width: 13vw;
+    height: 13vw;
+    background-color: rgba(123, 246, 205, 0.535);
+    top: 2.5vw;
+    left: 1.5vw;
+    box-shadow: 20px -20px 44px -6px rgb(123, 246, 205);
+}
+
+div.triangle2:hover {
+    left: -10vw;
+
+}
+
+
+.information img {
+
+    height: 30vw;
+    object-fit: contain;
+}
+
+#exp {
+    margin-left: 40%;
+    overflow: hidden;
+    height: 0px;
+    width: 10em;
+}
+
+.explanation {
+
+    padding: 2em;
+}
+
+.compare {
+    height: 0px;
+    overflow: hidden;
+}
+
+#sec3 {
+
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 4vw;
+    height: 0px;
+    align-items: center;
+    background-color: rgb(238, 235, 232);
+    box-shadow: 20px -20px 44px -6px rgb(192, 233, 219);
+
+
+
+}
+
+div.triangle3 {
+
+    position: relative;
+    width: 17vw;
+    height: 17vw;
+    background-color: rgb(17, 17, 17);
+    transform: rotate(45deg);
+
+    left: -14vw;
+    transition: 2s;
+}
+
+.tri3 {
+
+    position: relative;
+    width: 13vw;
+    height: 13vw;
+    background-color: rgba(123, 246, 205, 0.535);
+    top: 2.5vw;
+    left: 1.5vw;
+    box-shadow: 20px -20px 44px -6px rgb(123, 246, 205);
+}
+
+div.triangle3:hover {
+    left: -10vw;
+
+}
+
+#main {
+    width: 600px;
+    height: 400px;
+
+}
+
+#map {
+    margin-left: 15%;
+    width: 70%;
+    height: 600px;
+    margin-bottom: 300px;
+
+}

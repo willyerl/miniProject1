@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+
+
+    <script type="text/javascript" src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+
+
+
+
+    <script src="echarts.js"></script>
+    <link rel="stylesheet" href="miniProject.css">
+    <script src="miniProject.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fasthand&family=Island+Moments&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="small.css" media=(max-width:450px)>
+    <link rel="stylesheet" href="mediun2.css" media="(min-width: 450px) and (max-width: 1024px)">
+    <title>Mini Project1</title>
+</head>
+
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top ">
+        <a class="navbar-brand ms-2 " href="#"><b>Some data for you</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link ms-5 " onclick="asteroids()" href="#sec1"> NASA photo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ms-5" onclick="photos()" href="#sec2">Asteroids</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ms-5" onclick="natural()" href="#sec3">Natural events</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div id="photoStart" class="container-fluid">
+        <div id="photos" class="row justify-content-center">
+
+        </div>
+    </div>
+    <div class="tr">
+        <section id="sec1">
+            <div class="triangle1">
+                <p class="tri1"></p>
+            </div>
+            <div class="photoearth">
+                <h4>Every day, NASA posts a photo or a video.<br> You can choose any day and see what they have for you.
+                </h4>
+                <input type="date" name="date" id="date" value="2022-02-11">
+                <button type="button" onclick="DayImage()" class="btn btn-outline-success">Show</button>
+            </div>
+            <div class="information">
+            </div>
+            <div id="exp"><button onclick="openExplanation()">Do you wanna see nore information about this
+                    photo</button></div>
+            <div id="explanation"></div>
+        </section>
+    </div>
+    <section id="sec2">
+        <div class="triangle2">
+            <p class="tri2"></p>
+        </div>
+        <div class="Asteroids">
+            <h4>Check for an asteroidthat may be a danger
+                <br> to us that was sighted on this particular day</h4>
+            <input type="date" name="dateast" id="dateast" value="2022-11-02">
+            <button type="button" onclick="asteroid()" class="btn btn-outline-success">Show</button>
+        </div>
+        <div class="astinfo"></div>
+
+
+
+    </section>
+    <div class="compare">
+        <table class="table table-hover table-striped  mt-3 bg-light">
+            <thead>
+                <tr style="background-color: grey;">
+                    <th scope="col">Name</th>
+                    <th scope="col">Averge Size</th>
+                    <th scope="col">asteroid</th>
+                    <th scope="col">efeil</th>
+                </tr>
+            </thead>
+            <tbody id="some"></tbody>
+        </table>
+    </div>
+
+
+    <section id="sec3">
+        <div class="triangle3">
+            <p class="tri3"></p>
+        </div>
+        <div class="Natural">
+            <h4>Some dangers come from space,<br> but we also have dangers on our own planet. </h4>
+
+            <button type="button" onclick="naturalEvents()" class="btn btn-outline-success">And whats is happening in our word </button>
+            <div id="main1" style="text-align: center; padding-top: 30px;"></div>
+        </div>
+
+
+        <div id="cont"></div>
+    </section>
+    <div id="map1"></div>
+    <script>
+        let place = []
+        let vulcanos = []
+        let coordinate = []
+        async function whereVulcan() {
+            let response = await fetch(`https://eonet.gsfc.nasa.gov/api/v2.1/events`)
+            let data1 = await response.json()
+            let catego = data1.events;
+            
+
+            for (let i in catego) {
+
+                let theNames = catego[i].categories
+                if (theNames[0].title === "Volcanoes") {
+                    vulcanos.push(catego[i])
+                }
+            }
+            
+            
+            document.getElementById("cont").innerHTML = `<button type="button" onclick="showMap()">we've had ${vulcanos.length} volcanoes erupt these last few years</button><br><br>
+            <select class="coor" name="contries" id="coor"></select>`
+
+            for (let j in vulcanos) {
+
+                let th = vulcanos[j].title
+                // let split = th.split(",");
+                // let justCountrie = split[1]
+                let geometrie = vulcanos[j].geometries
+                place.push(geometrie[0].coordinates)
+
+
+                document.querySelector(".coor").innerHTML += `<option  value="${place[j]}">${th}</option>`
+            }
+
+
+        }
+
+        function showMap() {
+            document.getElementById("map1").innerHTML = `  <div id="map"></div>`
+
+            coordinate = document.getElementById("coor").value
+            let splitcoord = coordinate.split(",");
+            let rigthcoordinate = [splitcoord[1], splitcoord[0]]
+
+
+            var map = L.map('map').setView([splitcoord[1], splitcoord[0]], 5);
+            L.tileLayer(`https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=h3nre2KHFYnaN2a3l9p8`, {
+                attribution: `<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> 
+                <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>`
+            }).addTo(map);
+            var marker = L.marker([splitcoord[1], splitcoord[0]]).addTo(map);
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>
