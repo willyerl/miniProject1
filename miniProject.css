@@ -18,12 +18,15 @@ body {
     flex-wrap: wrap;
     column-count: 3;
     column-gap: 10px;
-    height: 0px;
+    
     overflow: hidden;
     align-items: center;
     font-size: large;
     margin-left: -24px;
-    background-color: rgb(241, 231, 223);
+    margin-top: 1em;
+    padding: 1em;
+    height: inherit;
+    padding-bottom: 15em;
     box-shadow: 20px -20px 44px -6px rgb(192, 233, 219);
 
 
@@ -83,13 +86,37 @@ div.triangle1:hover {
     display: flex;
     flex-wrap: wrap;
     column-gap: 4vw;
-    height: 0px;
+    
     align-items: center;
-    background-color: rgb(241, 231, 223);
+    margin-top: 1em;
+    padding: 1em;
+    height: inherit;
+    padding-bottom: 15em;
     box-shadow: 20px -20px 44px -6px rgb(192, 233, 219);
 
 
 
+}
+.card-body{
+    background-color: black;
+    color: aquamarine;
+}
+.circ{
+    left: 60em;
+    width: 22em;
+    height: 15em;
+    border-radius: 50%;
+    
+    animation: spin 3s infinite linear;
+}
+@keyframes spin {
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+.aster img{
+    transform: rotate(300deg);    
+    
 }
 
 div.triangle2 {
@@ -150,9 +177,12 @@ div.triangle2:hover {
     display: flex;
     flex-wrap: nowrap;
     column-gap: 4vw;
-    height: 0px;
+    
     align-items: center;
-    background-color: rgb(238, 235, 232);
+    margin-top: 1em;
+    padding: 1em;
+    height: inherit;
+    padding-bottom: 15em;
     box-shadow: 20px -20px 44px -6px rgb(192, 233, 219);
 
 

@@ -1,58 +1,25 @@
 let API_KEY = "9zlk60FQiadOs05Sbgoyhx3YPtcBx9m8fKZWkPeA";
 // const fetch = require('node-fetch');
-let a = 0;
-function asteroids() {
-    if (a % 2 == 0) {
-        document.getElementById("sec1").style.marginTop = "1em";
-        document.getElementById("sec1").style.padding = "1em";
-        document.getElementById("sec1").style.height = "inherit";
-        document.getElementById("sec1").style.paddingBottom = "15em";
-        a++
-    }
-    else {
-        document.getElementById("sec1").style.marginTop = "0px";
-        document.getElementById("sec1").style.padding = "0px";
-        document.getElementById("sec1").style.height = "0px";
-        document.getElementById("sec1").style.paddingBottom = "0px";
 
-        a++
-    }
-}
-let p = 0;
 function photos() {
-    if (p % 2 == 0) {
-        document.getElementById("sec2").style.marginTop = "1em";
-        document.getElementById("sec2").style.padding = "1em";
-        document.getElementById("sec2").style.height = "inherit";
-        document.getElementById("sec2").style.paddingBottom = "15em";
+   
+        document.getElementById("map1").innerHTML = `  <div id="map"></div>`
+       
+    }
+ 
 
-        p++
-    }
-    else {
-        document.getElementById("sec2").style.marginTop = "0px";
-        document.getElementById("sec2").style.padding = "0px";
-        document.getElementById("sec2").style.height = "0px";
-        document.getElementById("sec2").style.paddingBottom = "0px";
-        document.querySelector(".compare").style.height = "0px";
-        p++
-    }
+function asteroids() {
+ 
+        document.getElementById("map1").innerHTML = `  <div id="map"></div>`
+      
+
 }
 let e = 0;
 function natural() {
-    if (e % 2 == 0) {
-        document.getElementById("sec3").style.marginTop = "1em";
-        document.getElementById("sec3").style.padding = "1em";
-        document.getElementById("sec3").style.height = "inherit";
-        document.getElementById("sec3").style.paddingBottom = "15em";
-        e++
-    }
-    else {
-        document.getElementById("sec3").style.marginTop = "0px";
-        document.getElementById("sec3").style.padding = "0px";
-        document.getElementById("sec3").style.height = "0px";
-        document.getElementById("sec1").style.paddingBottom = "0px";
-        e++
-    }
+ 
+        document.getElementById("map1").innerHTML = `  <div id="map"></div>`
+
+
 }
 nasaApi()
 async function nasaApi() {
@@ -120,14 +87,15 @@ async function openExplanation() {
 
 
 async function asteroid() {
+    // document.querySelector(".circ").style.marginLeft = "500px"
     document.querySelector(".astinfo").innerHTML = ""
 
-    document.querySelector(".compare").style.height = "0px";
+    // document.querySelector(".compare").style.height = "0px";
     let choiceDay = document.getElementById("dateast").value;
     let response = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${choiceDay}&end_date=${choiceDay}&api_key=${API_KEY}`)
     let data = await response.json()
     let hazard = data.near_earth_objects;
-    document.getElementById("some").innerHTML = ""
+    // document.getElementById("some").innerHTML = ""
     let day = hazard[choiceDay]
 
 
@@ -151,27 +119,27 @@ async function asteroid() {
         document.querySelector(".astinfo").innerHTML += `<p>no asteroid wich represent a hazard <br> have been see on ${choiceDay}</p>`
     }
     else {
-        document.querySelector(".astinfo").innerHTML += `<button type="button" onclick="compare(), asteroidscompare()" class="btn btn-outline-success">compare the size of the asteroids</button>`
+        document.querySelector(".astinfo").innerHTML += `<button type="button" onclick="compare()" class="btn btn-outline-success">compare the size of the asteroids</button>`
     }
 
 }
-let ac = 0;
-function asteroidscompare() {
-    if (ac % 2 == 0) {
-        document.querySelector(".compare").style.height = "inherit";
-        ac++
-    }
-    else {
-        document.querySelector(".compare").style.height = "0px";
-        ac++
-    }
-}
+// let ac = 0;
+// function asteroidscompare() {
+//     // if (ac % 2 == 0) {
+//     //     document.querySelector(".compare").style.height = "inherit";
+//     //     ac++
+//     // }
+//     // else {
+//     //     document.querySelector(".compare").style.height = "0px";
+//     //     ac++
+//     // }
+// }
 async function compare() {
     let choiceDay = document.getElementById("dateast").value;
     let response = await fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${choiceDay}&end_date=${choiceDay}&api_key=${API_KEY}`)
     let data = await response.json()
     let hazard = data.near_earth_objects;
-    document.getElementById("some").innerHTML = ""
+    // document.getElementById("some").innerHTML = ""
     let day = hazard[choiceDay]
 
     for (let i in day) {
@@ -182,13 +150,20 @@ async function compare() {
             let avergeSize = ((size.estimated_diameter_min + size.estimated_diameter_max) / 2).toPrecision(5)
 
             let some = await day[i].estimated_diameter.kilometers.estimated_diameter_max;
-            let km = Number(some) * 600
+            let km = Number(some) * 200
 
-            document.getElementById("some").innerHTML += ` <tr><td> The asteroid ${day[i].name} maybe will hit us </td>
-            <td>The asteroid have averge ${avergeSize}km of diameter</td><td><img class="earthsize" style="height:180px " 
-            src="${'https://i.pinimg.com/originals/e8/60/ba/e860ba744a2cfe5f182d089b44e54e21.jpg'}"> </td><td><img class="asteroidsize" style=" border-radius: 50%; width:${km}px" 
-            src="${'https://solarsystem.nasa.gov/internal_resources/4898/'}"></td></tr>`
-
+            // document.getElementById("some").innerHTML += ` <tr><td> The asteroid ${day[i].name} maybe will hit us </td>
+            // <td>The asteroid have averge ${avergeSize}km of diameter</td><td><img class="earthsize" style="height:30px " 
+            // src="${'https://i.pinimg.com/originals/e8/60/ba/e860ba744a2cfe5f182d089b44e54e21.jpg'}"> </td><td><img class="asteroidsize" style=" border-radius: 50%; width:${km}px" 
+            // src="${'https://solarsystem.nasa.gov/internal_resources/4898/'}"></td></tr>`
+            const template = document.getElementById("card-template").content.cloneNode(true); //The cloneNode() method of the Node interface returns a duplicate of the node on which this method was called.                                                                               //Its parameter controls if the subtree contained in a node is also cloned or not.
+            template.querySelector('.card-title').innerText = `The asteroid ${day[i].name} maybe will hit us`;
+            template.querySelector('.card-text').innerText = `The asteroid have averge ${avergeSize}km of diameter`;
+            template.querySelector('.card-img').innerHTML = `<img class="earthsize" style="height:60px " 
+            src="${'https://i.pinimg.com/originals/e8/60/ba/e860ba744a2cfe5f182d089b44e54e21.jpg'}">`;
+            template.querySelector('.card-img1').innerHTML = `<img class="asteroidsize" style=" border-radius: 50%; width:${km}px" 
+            src="${'https://solarsystem.nasa.gov/internal_resources/4898/'}">`
+            document.querySelector('#card-list').appendChild(template);
         }
 
     }

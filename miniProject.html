@@ -33,7 +33,16 @@
     <title>Mini Project1</title>
 </head>
 
-
+<template id="card-template">
+    <div class="card col-lg-3 col-md-6 col-sm-12">
+        <div class="card-body">
+            <div class="card-img"></div>
+            <div class="card-img1"></div>
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+        </div>
+    </div>
+</template>
 <body>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -57,10 +66,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link ms-5 " onclick="asteroids()" href="#sec1"> NASA photo</a>
+                    <a class="nav-link ms-5 " onclick=" photos()" href="#sec1"> NASA photo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link ms-5" onclick="photos()" href="#sec2">Asteroids</a>
+                    <a class="nav-link ms-5" onclick="asteroids()" href="#sec2">Asteroids</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link ms-5" onclick="natural()" href="#sec3">Natural events</a>
@@ -100,16 +109,28 @@
         <div class="Asteroids">
             <h4>Check for an asteroidthat may be a danger
                 <br> to us that was sighted on this particular day</h4>
+                
             <input type="date" name="dateast" id="dateast" value="2022-11-02">
+            
             <button type="button" onclick="asteroid()" class="btn btn-outline-success">Show</button>
+           
+       
         </div>
         <div class="astinfo"></div>
-
+        <div class="circ">
+            <div class="aster"><img src="https://artincontext.org/wp-content/uploads/2022/06/Meteor-drawing-11.jpg" alt="" width="200" height="100"></div>
+        </div>
+        
+        <div id="some" class="container ">
+            <div class="row "  id="card-list"></div>
+        
+    </div>
 
 
     </section>
-    <div class="compare">
-        <table class="table table-hover table-striped  mt-3 bg-light">
+    
+    <!-- <div class="compare">
+        <table class="table table-hover table-striped  mt-3 bg-light table-sm table-responsive">
             <thead>
                 <tr style="background-color: grey;">
                     <th scope="col">Name</th>
@@ -120,7 +141,7 @@
             </thead>
             <tbody id="some"></tbody>
         </table>
-    </div>
+    </div> -->
 
 
     <section id="sec3">
@@ -128,7 +149,7 @@
             <p class="tri3"></p>
         </div>
         <div class="Natural">
-            <h4>Some dangers come from space,<br> but we also have dangers on our own planet. </h4>
+            <h4>Some dangers come from space,<br> but we also have dangers on our own planet.</h4>
 
             <button type="button" onclick="naturalEvents()" class="btn btn-outline-success">And whats is happening in our word </button>
             <div id="main1" style="text-align: center; padding-top: 30px;"></div>
@@ -152,12 +173,12 @@
 
                 let theNames = catego[i].categories
                 if (theNames[0].title === "Volcanoes") {
-                    vulcanos.push(catego[i])
+                    vulcanos.push(catego[i]) 
                 }
             }
             
             
-            document.getElementById("cont").innerHTML = `<button type="button" onclick="showMap()">we've had ${vulcanos.length} volcanoes erupt these last few years</button><br><br>
+            document.getElementById("cont").innerHTML = `<button type="button" onclick="showMap()">We've had ${vulcanos.length} volcanoes erupt in the last few years; <br>perhaps you'd like to know where they are. </button><br><br>
             <select class="coor" name="contries" id="coor"></select>`
 
             for (let j in vulcanos) {

@@ -3,9 +3,9 @@
     padding: 1em;
     display: flex;
     flex-direction: column;
-    height: inherit;
+    height: 0px;
     row-gap: 2em;
-    background-color: rgb(147, 131, 131);
+    
     align-items: center;
 
 
@@ -61,9 +61,10 @@ div.triangle1 {
     padding: 1em;
     display: flex;
     flex-direction: column;
-    height: inherit;
+    height: 0px;
     row-gap: 2em;
-    background-color: rgb(147, 131, 131);
+    align-items: center;
+    
 
 
 }
@@ -98,15 +99,17 @@ div.triangle2 {
     height: 60vw;
     object-fit: contain;
 }
-
+.compare{
+    width: 100%;
+}
 #sec3 {
 
     padding: 1em;
     display: flex;
     flex-direction: column;
-    height: inherit;
+    height: 0px;
     row-gap: 2em;
-    background-color: rgb(147, 131, 131);
+    
 
 
 }
@@ -147,4 +150,13 @@ div.triangle3 {
     height: 300px;
     margin-bottom: 300px;
 
+}
+.circ{
+    left: 6em;
+    width: 4em;
+    height: 4em;
+}
+.aster img{
+   width: 1.5em;
+   height: 2em;
 }
